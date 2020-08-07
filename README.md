@@ -52,39 +52,39 @@ pipeline:
     az/hider:
         input: python/namer
         #output-artifact: source-file-az-hider
-    python/codegen:
-        input: az/hider
-    az/merger:
-        input: python/namer
+    #python/codegen:
+        #input: az/hider
+    #az/merger:
+        #input: python/namer
         #output-artifact: source-file-merger
-    az/aznamer:
-        input: az/merger
+    #az/aznamer:
+        #input: az/merger
         #output-artifact: source-file-aznamer
-    az/modifiers:
-        input: az/aznamer
+    #az/modifiers:
+        #input: az/aznamer
         #output-artifact: source-file-modifiers
-    az/azgenerator:
-        input: az/modifiers
-        output-artifact: source-file-extension
+    #az/azgenerator:
+        #input: az/modifiers
+        #output-artifact: source-file-extension
     az/emitter:
         input:
-            #- az/hider
+            - az/hider
             #- az/clicommon
             #- az/merger
             #- az/aznamer
             #- az/modifiers
-            - az/azgenerator
+            #- az/azgenerator
         scope: scope-az
 
 scope-az:
     is-object: false
     output-artifact:
-        #- source-file-az-hider
+        - source-file-az-hider
         #- source-file-pynamer
         #- source-file-aznamer
         #- source-file-modifiers
         #- source-file-merger
-        - source-file-extension
+        #- source-file-extension
     output-folder: $(az-output-folder)
 
 scope-clicommon:
