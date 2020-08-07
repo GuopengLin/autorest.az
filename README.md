@@ -69,10 +69,10 @@ pipeline:
     az/emitter:
         input:
             - az/hider
-            - az/clicommon
-            - az/merger
-            - az/aznamer
-            - az/modifiers
+            #- az/clicommon
+            #- az/merger
+            #- az/aznamer
+            #- az/modifiers
             #- az/azgenerator
         scope: scope-az
 
@@ -80,10 +80,10 @@ scope-az:
     is-object: false
     output-artifact:
         - source-file-az-hider
-        - source-file-pynamer
-        - source-file-aznamer
-        - source-file-modifiers
-        - source-file-merger
+        #- source-file-pynamer
+        #- source-file-aznamer
+        #- source-file-modifiers
+        #- source-file-merger
         #- source-file-extension
     output-folder: $(az-output-folder)
 
