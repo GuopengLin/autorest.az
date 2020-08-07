@@ -52,17 +52,17 @@ pipeline:
     az/hider:
         input: python/namer
         output-artifact: source-file-az-hider
-    python/codegen:
-        input: az/hider
-    az/merger:
-        input: python/namer
-        output-artifact: source-file-merger
-    az/aznamer:
-        input: az/merger
-        output-artifact: source-file-aznamer
-    az/modifiers:
-        input: az/aznamer
-        output-artifact: source-file-modifiers
+    #python/codegen:
+        #input: az/hider
+    #az/merger:
+        #input: python/namer
+        #output-artifact: source-file-merger
+    #az/aznamer:
+        #input: az/merger
+        #output-artifact: source-file-aznamer
+    #az/modifiers:
+        #input: az/aznamer
+        #output-artifact: source-file-modifiers
     #az/azgenerator:
         #input: az/modifiers
         #output-artifact: source-file-extension
