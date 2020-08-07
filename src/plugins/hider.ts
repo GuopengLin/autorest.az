@@ -58,7 +58,6 @@ export async function processRequest(host: Host) {
         const plugin = new Hider(session);
         plugin.codeModel.info['extensionMode'] = extensionMode;
         const result = await plugin.process();
-        Info(serialize(result));
         host.WriteFile('code-model-v4-no-tags.yaml', serialize(result));
     } catch (E) {
         if (debug) {
