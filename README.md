@@ -51,7 +51,7 @@ pipeline:
         input: clicommon/identity
     az/hider:
         input: python/namer
-        #output-artifact: source-file-az-hider
+        output-artifact: source-file-az-hider
     #python/codegen:
         #input: az/hider
     #az/merger:

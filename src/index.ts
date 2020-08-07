@@ -17,6 +17,8 @@ export async function initializePlugins(pluginHost: AutoRestExtension) {
 }
 
 export async function az() {
+
+
     const extension = new AutoRestExtension();
     await initializePlugins(extension);
     extension.Run();
